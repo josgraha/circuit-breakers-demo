@@ -1,0 +1,12 @@
+#! /usr/bin/env ruby
+require 'net/http'
+
+cities = ['chicago', 'milwaukee', 'san%20francisco', 'new%20york',
+           'portland', 'seattle', 'boston']
+
+while true
+  http = Net::HTTP.new('localhost', 8080)
+  url = "/city/#{cities.sample}/news"
+  puts "GET #{url} - #{http.get(url).code}"
+  sleep 0.01
+end

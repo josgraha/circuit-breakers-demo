@@ -48,7 +48,7 @@ Open three terminal tabs for the following folders
 _Note: start the gateway service last_
 
 Setup environment variables:
-```. env.sh```
+```source env.sh```
 Run the service
 ```gradlew run```
 

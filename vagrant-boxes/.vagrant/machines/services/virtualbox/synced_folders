@@ -1,1 +1,1 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/josgraham/Dropbox/Projects/ws_yieldmo/_reference/devops-friendly-microservices/Ch5/Hystrix/vagrant-boxes","disabled":false,"__vagrantfile":true}}}
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/joegraham/Dropbox/ws_yieldmo/_demo/circuit-breakers-demo/vagrant-boxes","disabled":false,"__vagrantfile":true}}}

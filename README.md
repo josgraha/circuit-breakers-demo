@@ -120,26 +120,29 @@ Sample data:
 ```
 
 ### Launching the Hystrix Dashboard
+
 In a web browser open the dashboard.
 
 [http://192.168.99.100:7979]()
 
 Enter the stream url in the text input.
 
-```http://192.168.33.1:8080/hystrix.stream```
+``` http://192.168.33.1:8080/hystrix.stream ```
 
 Click the `Add Stream` button.
 
 Click the `Monitor Streams` button.
 
 ### Starting the Traffic
+
 The traffic generator invokes a randomly generated list of cities against the News Aggregator service.
 
 From the `traffic-builder` folder run the following:
 
-```./traffic```
+``` ./traffic ```
 
 ### Delete the News Store Entries
+
 From Postman invoke the `delete` service to clear out the News Store entries.  This will cause the News Service to fail health checks.  Consul will remove it from the service list and the News Aggregrator circuit breaker will trip, opening the circuit for the News Service.
 
 ``` http://localhost:8081/delete ```
@@ -150,12 +153,15 @@ OK
 ```
 
 ### Testing the Aggregator
+
 Invoke the aggregator url and the results should contain the default "No News" news object.
 
 ### Monitoring Dashboard
+
 Check the Hystrix dashboard and watch the failure count increase.
 
 ### Restore the News Store Entries
+
 Invoke the `load` endpoint on the News Service.
 
 ### Monitoring the Dashboard and Aggregator
